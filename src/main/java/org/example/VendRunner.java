@@ -20,7 +20,7 @@ public class VendRunner {
 		Slot<Beverage> slot5 = new Slot<Beverage>(b2, 2);
 		Slot<Beverage> slot6 = new Slot<Beverage>(b3, 2);
 
-
+		//Toren was here!!
 		// objMap object containing list of slots
 		//VendingMachine vendingMachine2 = new VendingMachine(list of slots);
 
