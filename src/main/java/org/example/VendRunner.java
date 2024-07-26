@@ -9,31 +9,31 @@ public class VendRunner {
 		Snack snack2 = new Snack("Potato Chips", 1.75, true);
 		Snack snack3 = new Snack("Beef Jerky", 2.50, false);
 
+//		Product prodEr1 = new Snack("", 3.50, false);
+//		Product prodEr2 = new Snack(null, 2.50, true);
+//		Product prodEr3 = new Snack("Twizzlers", -1.50, true);
+
+//		Product bevErr1 = new Beverage("Celsius", 2.50, -1.5);
+
 		Beverage b1 = new Beverage("Red Bull", 3.50, 4.5);
 		Beverage b2 = new Beverage("Pepsi", 2.00, 3.0);
 		Beverage b3 = new Beverage("Gatorade", 2.50, 4.0);
 
-		Slot<Snack> slot1 = new Slot<Snack>(snack1, 3);
-		Slot<Snack> slot2 = new Slot<Snack>(snack2, 2);
-		Slot<Snack> slot3 = new Slot<Snack>(snack3, 4);
-		Slot<Beverage> slot4 = new Slot<Beverage>(b1, 2);
-		Slot<Beverage> slot5 = new Slot<Beverage>(b2, 2);
-		Slot<Beverage> slot6 = new Slot<Beverage>(b3, 2);
+//		b1.setFlOunces(-5.5);
 
-		//Toren was here!!
-		// objMap object containing list of slots
-		//VendingMachine vendingMachine2 = new VendingMachine(list of slots);
+//		Slot<Snack> slotEr1 = new Slot<>(snack1, -4);
+//		Slot<Beverage> slotEr2 = new Slot<>(null, 6);
 
+		Slot<Snack> slot1 = new Slot<>(snack2, 4);
 
-		VendingMachine vendingMachine = new VendingMachine();
-		vendingMachine.addProduct("F1", slot1);
-		vendingMachine.addProduct("F2", slot2);
-		vendingMachine.addProduct("F3", slot4);
-		vendingMachine.addProduct("F4", slot5);
-		
-		vendingMachine.dispenseProduct("F2");
+		VendingMachine vendErr1 = new VendingMachine();
 
+//		vendErr1.addProduct(null, slot1);
+//		vendErr1.addProduct("", slot1);
+//		vendErr1.addProduct("D3", null);
 
+//		vendErr1.dispenseProduct(null);
+//		vendErr1.dispenseProduct("");
 
 	}
 }

@@ -16,21 +16,32 @@ public class VendingMachine {
 	}
 
 	public void addProduct(String code, Slot<? extends Product> slot) {
-		slots.put(code, slot);
+		if(code == null || code.isEmpty()) {
+			throw new IllegalArgumentException("Product cannot be null or empty");
+		}
+		if(slot == null) {
+			throw new IllegalArgumentException("Slot cannot be null");
+		}else {
+			slots.put(code, slot);
+		}
 	}
 
 	public void dispenseProduct(String code) {
-		if (slots.containsKey(code)) {
-			if (this.slots.get(code).getQuantity() > 0) {
-				Slot<? extends Product> slot = this.slots.get(code);
-				slot.setQuantity(this.slots.get(code).getQuantity() - 1);
-				System.out.println(slot.getProduct().getName());
-			} else {
-				System.out.println("Product Not Available");
-			}
-		} else {
-			System.out.println("Invalid Input");
-		}
+     if(code == null || code.isEmpty()){
+		 throw new IllegalArgumentException("Product cannot be null or empty");
+	 }else {
+		 if (slots.containsKey(code)) {
+			 if (this.slots.get(code).getQuantity() > 0) {
+				 Slot<? extends Product> slot = this.slots.get(code);
+				 slot.setQuantity(this.slots.get(code).getQuantity() - 1);
+				 System.out.println(slot.getProduct().getName());
+			 } else {
+				 System.out.println("Product Not Available");
+			 }
+		 } else {
+			 System.out.println("Invalid Input");
+		 }
+	 }
 	}
 
 	// "F2"

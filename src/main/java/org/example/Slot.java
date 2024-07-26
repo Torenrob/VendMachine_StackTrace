@@ -7,8 +7,18 @@ public class Slot <T extends Product> {
 	public Slot() {	}
 
 	public Slot(T product, int quantity) {
-		this.product = product;
-		this.quantity = quantity;
+		if (product == null) {
+			throw new IllegalArgumentException("Product cannot be null");
+		}
+		else {
+			this.product = product;
+		}
+		if (quantity < 0) {
+			throw new IllegalArgumentException("Quantity cannot be less than 0");
+		}
+		else {
+			this.quantity = quantity;
+		}
 	}
 
 	public T getProduct() {
@@ -16,7 +26,12 @@ public class Slot <T extends Product> {
 	}
 
 	public void setProduct(T product) {
-		this.product = product;
+		if (product == null) {
+			throw new IllegalArgumentException("Product cannot be null");
+		}
+		else {
+			this.product = product;
+		}
 	}
 
 	public int getQuantity() {
@@ -24,7 +39,12 @@ public class Slot <T extends Product> {
 	}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+		if (quantity < 0) {
+			throw new IllegalArgumentException("Quantity cannot be less than 0");
+		}
+		else {
+			this.quantity = quantity;
+		}
 	}
 
 	//fori loop, each iteration prints "Slot[i}
